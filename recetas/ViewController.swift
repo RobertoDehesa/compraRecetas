@@ -10,6 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func listasButton(sender: AnyObject) {
+    }
+    
+    @IBAction func recetasButton(sender: AnyObject) {
+    }
+    
+    @IBAction func supermercadosButton(sender: AnyObject) {
+    }
+    
+    @IBAction func articulosButton(sender: AnyObject) {
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

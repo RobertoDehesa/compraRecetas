@@ -7,12 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C484FED1A630D2A00885F19 /* ListasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C484FEC1A630D2A00885F19 /* ListasTableViewController.swift */; };
+		7C484FEF1A6318E200885F19 /* Lista.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C484FEE1A6318E200885F19 /* Lista.swift */; };
+		7C484FF31A632C2C00885F19 /* DetalleListaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C484FF21A632C2C00885F19 /* DetalleListaTableViewController.swift */; };
+		7C484FF51A6335AF00885F19 /* DetalleLista.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C484FF41A6335AF00885F19 /* DetalleLista.swift */; };
+		7C4FEAEC1A7544410054AA1E /* EditarArticuloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4FEAEB1A7544400054AA1E /* EditarArticuloViewController.swift */; };
+		7C4FEAEE1A754C670054AA1E /* DetalleArticuloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4FEAED1A754C670054AA1E /* DetalleArticuloViewController.swift */; };
+		7C4FEAF01A7565040054AA1E /* manzana.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C4FEAEF1A7565040054AA1E /* manzana.png */; };
 		7C6B7A191A4F156A002090FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B7A181A4F156A002090FD /* AppDelegate.swift */; };
 		7C6B7A1B1A4F156A002090FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B7A1A1A4F156A002090FD /* ViewController.swift */; };
 		7C6B7A1E1A4F156A002090FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C6B7A1C1A4F156A002090FD /* Main.storyboard */; };
 		7C6B7A201A4F156A002090FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C6B7A1F1A4F156A002090FD /* Images.xcassets */; };
 		7C6B7A231A4F156A002090FD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6B7A211A4F156A002090FD /* LaunchScreen.xib */; };
 		7C6B7A2F1A4F156A002090FD /* recetasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6B7A2E1A4F156A002090FD /* recetasTests.swift */; };
+		7C9EE75C1A6AB4E500A38523 /* NuevaListaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9EE75B1A6AB4E500A38523 /* NuevaListaViewController.swift */; };
+		7CB84E0A1A6C3C0A00DA8348 /* AñadirArticuloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB84E091A6C3C0A00DA8348 /* AñadirArticuloViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +35,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C484FEC1A630D2A00885F19 /* ListasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListasTableViewController.swift; sourceTree = "<group>"; };
+		7C484FEE1A6318E200885F19 /* Lista.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lista.swift; sourceTree = "<group>"; };
+		7C484FF21A632C2C00885F19 /* DetalleListaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleListaTableViewController.swift; sourceTree = "<group>"; };
+		7C484FF41A6335AF00885F19 /* DetalleLista.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleLista.swift; sourceTree = "<group>"; };
+		7C4FEAEB1A7544400054AA1E /* EditarArticuloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditarArticuloViewController.swift; sourceTree = "<group>"; };
+		7C4FEAED1A754C670054AA1E /* DetalleArticuloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleArticuloViewController.swift; sourceTree = "<group>"; };
+		7C4FEAEF1A7565040054AA1E /* manzana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = manzana.png; path = ../../../../../Downloads/manzana.png; sourceTree = "<group>"; };
 		7C6B7A131A4F156A002090FD /* recetas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = recetas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C6B7A171A4F156A002090FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C6B7A181A4F156A002090FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +52,8 @@
 		7C6B7A281A4F156A002090FD /* recetasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = recetasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C6B7A2D1A4F156A002090FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C6B7A2E1A4F156A002090FD /* recetasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recetasTests.swift; sourceTree = "<group>"; };
+		7C9EE75B1A6AB4E500A38523 /* NuevaListaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuevaListaViewController.swift; sourceTree = "<group>"; };
+		7CB84E091A6C3C0A00DA8348 /* AñadirArticuloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AñadirArticuloViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C4FEAF11A7567D60054AA1E /* Imagenes */ = {
+			isa = PBXGroup;
+			children = (
+				7C4FEAEF1A7565040054AA1E /* manzana.png */,
+			);
+			name = Imagenes;
+			sourceTree = "<group>";
+		};
 		7C6B7A0A1A4F156A002090FD = {
 			isa = PBXGroup;
 			children = (
@@ -77,12 +103,21 @@
 		7C6B7A151A4F156A002090FD /* recetas */ = {
 			isa = PBXGroup;
 			children = (
+				7C4FEAF11A7567D60054AA1E /* Imagenes */,
 				7C6B7A181A4F156A002090FD /* AppDelegate.swift */,
 				7C6B7A1A1A4F156A002090FD /* ViewController.swift */,
 				7C6B7A1C1A4F156A002090FD /* Main.storyboard */,
 				7C6B7A1F1A4F156A002090FD /* Images.xcassets */,
 				7C6B7A211A4F156A002090FD /* LaunchScreen.xib */,
 				7C6B7A161A4F156A002090FD /* Supporting Files */,
+				7C484FEC1A630D2A00885F19 /* ListasTableViewController.swift */,
+				7C484FEE1A6318E200885F19 /* Lista.swift */,
+				7C484FF21A632C2C00885F19 /* DetalleListaTableViewController.swift */,
+				7C484FF41A6335AF00885F19 /* DetalleLista.swift */,
+				7C9EE75B1A6AB4E500A38523 /* NuevaListaViewController.swift */,
+				7CB84E091A6C3C0A00DA8348 /* AñadirArticuloViewController.swift */,
+				7C4FEAEB1A7544400054AA1E /* EditarArticuloViewController.swift */,
+				7C4FEAED1A754C670054AA1E /* DetalleArticuloViewController.swift */,
 			);
 			path = recetas;
 			sourceTree = "<group>";
@@ -192,6 +227,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C4FEAF01A7565040054AA1E /* manzana.png in Resources */,
 				7C6B7A1E1A4F156A002090FD /* Main.storyboard in Resources */,
 				7C6B7A231A4F156A002090FD /* LaunchScreen.xib in Resources */,
 				7C6B7A201A4F156A002090FD /* Images.xcassets in Resources */,
@@ -212,8 +248,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C4FEAEC1A7544410054AA1E /* EditarArticuloViewController.swift in Sources */,
+				7C4FEAEE1A754C670054AA1E /* DetalleArticuloViewController.swift in Sources */,
+				7C484FF31A632C2C00885F19 /* DetalleListaTableViewController.swift in Sources */,
 				7C6B7A1B1A4F156A002090FD /* ViewController.swift in Sources */,
+				7CB84E0A1A6C3C0A00DA8348 /* AñadirArticuloViewController.swift in Sources */,
 				7C6B7A191A4F156A002090FD /* AppDelegate.swift in Sources */,
+				7C484FF51A6335AF00885F19 /* DetalleLista.swift in Sources */,
+				7C484FED1A630D2A00885F19 /* ListasTableViewController.swift in Sources */,
+				7C484FEF1A6318E200885F19 /* Lista.swift in Sources */,
+				7C9EE75C1A6AB4E500A38523 /* NuevaListaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +449,7 @@
 				7C6B7A341A4F156A002090FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C6B7A351A4F156A002090FD /* Build configuration list for PBXNativeTarget "recetasTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +458,7 @@
 				7C6B7A371A4F156A002090FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
