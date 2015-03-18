@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6751" systemVersion="14C1510" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Articulo" representedClassName="CArticulo" syncable="YES">
+        <attribute name="categoria_id" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="descripcion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idarticulo" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="imagen" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nombre" attributeType="String" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cesta_Articulo" inverseName="newRelationship1" inverseEntity="Cesta_Articulo" syncable="YES"/>
+    </entity>
+    <entity name="Cesta" representedClassName="CCesta" syncable="YES">
+        <attribute name="aviso_localizacion" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="comentarios" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fechahora_creacion" attributeType="Date" syncable="YES"/>
+        <attribute name="idcesta" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="nombre" attributeType="String" syncable="YES"/>
+        <attribute name="orden" attributeType="Integer 16" defaultValueString="1" syncable="YES"/>
+        <attribute name="tienda_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tienda" inverseName="newRelationship" inverseEntity="Tienda" syncable="YES"/>
+        <relationship name="newRelationship1" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cesta_Articulo" inverseName="newRelationship" inverseEntity="Cesta_Articulo" syncable="YES"/>
+    </entity>
+    <entity name="Cesta_Articulo" representedClassName="CCesta_Articulo" syncable="YES">
+        <attribute name="articulo_id" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="cantidad" optional="YES" attributeType="String" defaultValueString="1" syncable="YES"/>
+        <attribute name="cesta_id" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="comprado" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="idcesta_articulo" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="orden" attributeType="Integer 16" defaultValueString="1" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cesta" inverseName="newRelationship1" inverseEntity="Cesta" syncable="YES"/>
+        <relationship name="newRelationship1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Articulo" inverseName="newRelationship" inverseEntity="Articulo" syncable="YES"/>
+    </entity>
+    <entity name="Tienda" representedClassName="CTienda" syncable="YES">
+        <attribute name="direccion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idtienda" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="localizacion_latitud" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="localizacion_longitud" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="nombre" attributeType="String" syncable="YES"/>
+        <attribute name="poblacion" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cesta" inverseName="newRelationship" inverseEntity="Cesta" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Tienda" positionX="-533" positionY="-556" width="128" height="148"/>
+        <element name="Articulo" positionX="-92" positionY="-99" width="128" height="133"/>
+        <element name="Cesta" positionX="-315" positionY="-424" width="128" height="178"/>
+        <element name="Cesta_Articulo" positionX="-108" positionY="-522" width="128" height="163"/>
+    </elements>
+</model>

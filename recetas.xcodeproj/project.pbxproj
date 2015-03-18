@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6FD03BC01AB9FD6C007D14C3 /* ModelDataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6FD03BBE1AB9FD6C007D14C3 /* ModelDataBase.xcdatamodeld */; };
+		6FD03BC61ABA0E13007D14C3 /* CArticulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD03BC51ABA0E13007D14C3 /* CArticulo.swift */; };
+		6FD03BC81ABA0E14007D14C3 /* CTienda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD03BC71ABA0E14007D14C3 /* CTienda.swift */; };
+		6FD03BCA1ABA0E14007D14C3 /* CCesta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD03BC91ABA0E14007D14C3 /* CCesta.swift */; };
+		6FD03BCC1ABA0E14007D14C3 /* CCesta_Articulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD03BCB1ABA0E14007D14C3 /* CCesta_Articulo.swift */; };
 		7C484FED1A630D2A00885F19 /* ListasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C484FEC1A630D2A00885F19 /* ListasTableViewController.swift */; };
 		7C484FEF1A6318E200885F19 /* Lista.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C484FEE1A6318E200885F19 /* Lista.swift */; };
 		7C484FF31A632C2C00885F19 /* DetalleListaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C484FF21A632C2C00885F19 /* DetalleListaTableViewController.swift */; };
@@ -35,13 +40,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6FD03BBF1AB9FD6C007D14C3 /* ModelDataBase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ModelDataBase.xcdatamodel; sourceTree = "<group>"; };
+		6FD03BC51ABA0E13007D14C3 /* CArticulo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CArticulo.swift; sourceTree = "<group>"; };
+		6FD03BC71ABA0E14007D14C3 /* CTienda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTienda.swift; sourceTree = "<group>"; };
+		6FD03BC91ABA0E14007D14C3 /* CCesta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCesta.swift; sourceTree = "<group>"; };
+		6FD03BCB1ABA0E14007D14C3 /* CCesta_Articulo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCesta_Articulo.swift; sourceTree = "<group>"; };
 		7C484FEC1A630D2A00885F19 /* ListasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListasTableViewController.swift; sourceTree = "<group>"; };
 		7C484FEE1A6318E200885F19 /* Lista.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lista.swift; sourceTree = "<group>"; };
 		7C484FF21A632C2C00885F19 /* DetalleListaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleListaTableViewController.swift; sourceTree = "<group>"; };
 		7C484FF41A6335AF00885F19 /* DetalleLista.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleLista.swift; sourceTree = "<group>"; };
 		7C4FEAEB1A7544400054AA1E /* EditarArticuloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditarArticuloViewController.swift; sourceTree = "<group>"; };
 		7C4FEAED1A754C670054AA1E /* DetalleArticuloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleArticuloViewController.swift; sourceTree = "<group>"; };
-		7C4FEAEF1A7565040054AA1E /* manzana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = manzana.png; path = ../../../../../Downloads/manzana.png; sourceTree = "<group>"; };
+		7C4FEAEF1A7565040054AA1E /* manzana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = manzana.png; path = ../../../Downloads/manzana.png; sourceTree = "<group>"; };
 		7C6B7A131A4F156A002090FD /* recetas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = recetas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C6B7A171A4F156A002090FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C6B7A181A4F156A002090FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +95,10 @@
 		7C6B7A0A1A4F156A002090FD = {
 			isa = PBXGroup;
 			children = (
+				6FD03BCB1ABA0E14007D14C3 /* CCesta_Articulo.swift */,
+				6FD03BC91ABA0E14007D14C3 /* CCesta.swift */,
+				6FD03BC71ABA0E14007D14C3 /* CTienda.swift */,
+				6FD03BC51ABA0E13007D14C3 /* CArticulo.swift */,
 				7C6B7A151A4F156A002090FD /* recetas */,
 				7C6B7A2B1A4F156A002090FD /* recetasTests */,
 				7C6B7A141A4F156A002090FD /* Products */,
@@ -103,6 +117,7 @@
 		7C6B7A151A4F156A002090FD /* recetas */ = {
 			isa = PBXGroup;
 			children = (
+				6FD03BBE1AB9FD6C007D14C3 /* ModelDataBase.xcdatamodeld */,
 				7C4FEAF11A7567D60054AA1E /* Imagenes */,
 				7C6B7A181A4F156A002090FD /* AppDelegate.swift */,
 				7C6B7A1A1A4F156A002090FD /* ViewController.swift */,
@@ -252,12 +267,17 @@
 				7C4FEAEE1A754C670054AA1E /* DetalleArticuloViewController.swift in Sources */,
 				7C484FF31A632C2C00885F19 /* DetalleListaTableViewController.swift in Sources */,
 				7C6B7A1B1A4F156A002090FD /* ViewController.swift in Sources */,
+				6FD03BC61ABA0E13007D14C3 /* CArticulo.swift in Sources */,
+				6FD03BC01AB9FD6C007D14C3 /* ModelDataBase.xcdatamodeld in Sources */,
 				7CB84E0A1A6C3C0A00DA8348 /* AñadirArticuloViewController.swift in Sources */,
 				7C6B7A191A4F156A002090FD /* AppDelegate.swift in Sources */,
 				7C484FF51A6335AF00885F19 /* DetalleLista.swift in Sources */,
 				7C484FED1A630D2A00885F19 /* ListasTableViewController.swift in Sources */,
 				7C484FEF1A6318E200885F19 /* Lista.swift in Sources */,
 				7C9EE75C1A6AB4E500A38523 /* NuevaListaViewController.swift in Sources */,
+				6FD03BCA1ABA0E14007D14C3 /* CCesta.swift in Sources */,
+				6FD03BC81ABA0E14007D14C3 /* CTienda.swift in Sources */,
+				6FD03BCC1ABA0E14007D14C3 /* CCesta_Articulo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +481,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6FD03BBE1AB9FD6C007D14C3 /* ModelDataBase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6FD03BBF1AB9FD6C007D14C3 /* ModelDataBase.xcdatamodel */,
+			);
+			currentVersion = 6FD03BBF1AB9FD6C007D14C3 /* ModelDataBase.xcdatamodel */;
+			name = ModelDataBase.xcdatamodeld;
+			path = ../ModelDataBase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7C6B7A0B1A4F156A002090FD /* Project object */;
 }
