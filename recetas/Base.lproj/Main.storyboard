@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WHV-kk-XO7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WHV-kk-XO7">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--Inicio-->
@@ -41,18 +41,6 @@
                                     <action selector="recetasButton:" destination="ft8-82-yC0" eventType="touchUpInside" id="hfk-yT-5P9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPZ-76-L5M">
-                                <rect key="frame" x="132" y="364" width="109" height="30"/>
-                                <state key="normal" title="Supermercados">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="43" y="369" width="109" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="supermercadosButton:" destination="ft8-82-yC0" eventType="touchUpInside" id="oyg-N2-5t1"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdo-0W-BLN">
                                 <rect key="frame" x="392" y="364" width="60" height="30"/>
                                 <state key="normal" title="Artículos">
@@ -64,6 +52,19 @@
                                 <connections>
                                     <action selector="articulosButton:" destination="ft8-82-yC0" eventType="touchUpInside" id="Y3m-Z4-JeP"/>
                                     <segue destination="dai-M1-dO2" kind="show" id="Rlg-yj-P4p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPZ-76-L5M">
+                                <rect key="frame" x="132" y="364" width="109" height="30"/>
+                                <state key="normal" title="Supermercados">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="43" y="369" width="109" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="supermercadosButton:" destination="ft8-82-yC0" eventType="touchUpInside" id="oyg-N2-5t1"/>
+                                    <segue destination="zwq-l5-ejc" kind="show" id="rin-Tp-yIh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -319,6 +320,108 @@
             </objects>
             <point key="canvasLocation" x="4804.5" y="870"/>
         </scene>
+        <!--Supermercados-->
+        <scene sceneID="xV5-yD-R3a">
+            <objects>
+                <tableViewController id="93k-ey-ABw" customClass="SupermercadosTableViewController" customModule="recetas" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hgj-3A-jjk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="hsO-sF-gRo">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hsO-sF-gRo" id="1yo-mr-ygt">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="93k-ey-ABw" id="fYR-TI-2pp"/>
+                            <outlet property="delegate" destination="93k-ey-ABw" id="YMW-qB-FZu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Supermercados" id="HvS-xe-53Q">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="eQO-v4-86j">
+                            <connections>
+                                <segue destination="Xb1-oo-Scs" kind="presentation" identifier="gotoNuevoSupermercadofromListaSupermercados" id="G0L-7Q-pJH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gFr-hh-6B9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3124" y="1722"/>
+        </scene>
+        <!--Nuevo Supermercado-->
+        <scene sceneID="MrW-z8-RDR">
+            <objects>
+                <viewController id="tm2-tC-yph" customClass="NuevoSupermercadoViewController" customModule="recetas" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XlE-Kt-WDs"/>
+                        <viewControllerLayoutGuide type="bottom" id="46W-26-FfA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c4S-tq-4Ie">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dirección" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zvD-iD-14I">
+                                <rect key="frame" x="138" y="195" width="324" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="324" id="dGy-j3-9dM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Población" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lXf-8u-M0j">
+                                <rect key="frame" x="138" y="264" width="324" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="324" id="JxJ-sG-nhg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tog-DS-u82">
+                                <rect key="frame" x="138" y="119" width="324" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="324" id="Kua-Lb-BT3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zvD-iD-14I" firstAttribute="top" secondItem="tog-DS-u82" secondAttribute="bottom" constant="46" id="FO4-On-oXM"/>
+                            <constraint firstItem="lXf-8u-M0j" firstAttribute="top" secondItem="zvD-iD-14I" secondAttribute="bottom" constant="39" id="O2E-Wj-YiT"/>
+                            <constraint firstAttribute="centerX" secondItem="lXf-8u-M0j" secondAttribute="centerX" id="Pdw-CZ-Ldb"/>
+                            <constraint firstAttribute="centerX" secondItem="zvD-iD-14I" secondAttribute="centerX" id="l4i-eR-m3Y"/>
+                            <constraint firstAttribute="centerX" secondItem="tog-DS-u82" secondAttribute="centerX" id="l6V-n5-kgb"/>
+                            <constraint firstItem="tog-DS-u82" firstAttribute="top" secondItem="XlE-Kt-WDs" secondAttribute="bottom" constant="55" id="rEu-hG-HjA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nuevo Supermercado" id="VJf-Jm-WMJ" colorLabel="IBBuiltInLabel-Green">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="5yd-hP-oGj">
+                            <connections>
+                                <action selector="CancelarPushButton:" destination="tm2-tC-yph" id="A4K-Ny-5ac"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Szh-yz-GcJ">
+                            <connections>
+                                <action selector="GuardarPushButton:" destination="tm2-tC-yph" id="BtV-vm-6yo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="DireccionTextField" destination="zvD-iD-14I" id="dxd-Tq-WSA"/>
+                        <outlet property="NombreTextField" destination="tog-DS-u82" id="Mhx-1c-iHk"/>
+                        <outlet property="PoblacionTextField" destination="lXf-8u-M0j" id="MXA-Hg-kB0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Zf-3t-o99" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4118" y="2443"/>
+        </scene>
         <!--Edicion articulo-->
         <scene sceneID="4nD-t7-z9X">
             <objects>
@@ -328,6 +431,7 @@
                         <viewControllerLayoutGuide type="bottom" id="cXe-fa-da2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PlL-3Z-dKl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E8U-nA-JZJ">
@@ -448,7 +552,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eaA-pO-Ods" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3301.5" y="1844"/>
+            <point key="canvasLocation" x="4925" y="1844"/>
         </scene>
         <!--Editar Articulo View Controller-->
         <scene sceneID="NMb-cS-2Fa">
@@ -459,6 +563,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Z6N-hV-gpq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7i1-Af-YRi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GgL-gj-wqg">
@@ -580,7 +685,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgt-sw-b8A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4297.5" y="1844"/>
+            <point key="canvasLocation" x="5921" y="1844"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mkq-4O-hhb">
@@ -618,8 +723,44 @@
             </objects>
             <point key="canvasLocation" x="3981" y="138"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ci9-0B-Ulj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zwq-l5-ejc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="x8A-nS-SXB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="93k-ey-ABw" kind="relationship" relationship="rootViewController" id="RcX-im-H2V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oHp-9V-P3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2312" y="1722"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7PB-Dp-bZJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xb1-oo-Scs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QHf-6U-f0e">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tm2-tC-yph" kind="relationship" relationship="rootViewController" id="ohm-oR-6S4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vYg-Tv-rEB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3306" y="2443"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VTt-Vt-vIU"/>
+        <segue reference="Rlg-yj-P4p"/>
     </inferredMetricsTieBreakers>
 </document>
