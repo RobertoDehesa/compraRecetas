@@ -13,6 +13,7 @@
 		6F3F9DFF1ABCA74F00FB68C5 /* Cesta_Articulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3F9DFE1ABCA74F00FB68C5 /* Cesta_Articulo.swift */; };
 		6F3F9E011ABCABB200FB68C5 /* SupermercadosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3F9E001ABCABB200FB68C5 /* SupermercadosTableViewController.swift */; };
 		6F4A04A51ABC8969008DA291 /* NuevoSupermercadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4A04A41ABC8969008DA291 /* NuevoSupermercadoViewController.swift */; };
+		6F4C84A81ABDD42400448DBE /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4C84A71ABDD42400448DBE /* UIColorExtension.swift */; };
 		6FD03BC01AB9FD6C007D14C3 /* ModelDataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6FD03BBE1AB9FD6C007D14C3 /* ModelDataBase.xcdatamodeld */; };
 		7C484FED1A630D2A00885F19 /* ListasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C484FEC1A630D2A00885F19 /* ListasTableViewController.swift */; };
 		7C484FEF1A6318E200885F19 /* Lista.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C484FEE1A6318E200885F19 /* Lista.swift */; };
@@ -48,6 +49,7 @@
 		6F3F9DFE1ABCA74F00FB68C5 /* Cesta_Articulo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cesta_Articulo.swift; sourceTree = "<group>"; };
 		6F3F9E001ABCABB200FB68C5 /* SupermercadosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupermercadosTableViewController.swift; sourceTree = "<group>"; };
 		6F4A04A41ABC8969008DA291 /* NuevoSupermercadoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuevoSupermercadoViewController.swift; sourceTree = "<group>"; };
+		6F4C84A71ABDD42400448DBE /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		6FD03BBF1AB9FD6C007D14C3 /* ModelDataBase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ModelDataBase.xcdatamodel; sourceTree = "<group>"; };
 		7C484FEC1A630D2A00885F19 /* ListasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListasTableViewController.swift; sourceTree = "<group>"; };
 		7C484FEE1A6318E200885F19 /* Lista.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lista.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				7C4FEAED1A754C670054AA1E /* DetalleArticuloViewController.swift */,
 				6F4A04A41ABC8969008DA291 /* NuevoSupermercadoViewController.swift */,
 				6F3F9E001ABCABB200FB68C5 /* SupermercadosTableViewController.swift */,
+				6F4C84A71ABDD42400448DBE /* UIColorExtension.swift */,
 			);
 			path = recetas;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				7C4FEAEE1A754C670054AA1E /* DetalleArticuloViewController.swift in Sources */,
 				6F3F9DFB1ABCA74F00FB68C5 /* Cesta.swift in Sources */,
 				7C484FF31A632C2C00885F19 /* DetalleListaTableViewController.swift in Sources */,
+				6F4C84A81ABDD42400448DBE /* UIColorExtension.swift in Sources */,
 				6F3F9DF91ABCA74F00FB68C5 /* Articulo.swift in Sources */,
 				7C6B7A1B1A4F156A002090FD /* ViewController.swift in Sources */,
 				6FD03BC01AB9FD6C007D14C3 /* ModelDataBase.xcdatamodeld in Sources */,
