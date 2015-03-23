@@ -1,39 +1,27 @@
 //
-//  ListasTableViewController.swift
+//  ArticulosTableViewController.swift
 //  recetas
 //
-//  Created by Roberto Dehesa  on 11/1/15.
+//  Created by Roberto Dehesa  on 22/3/15.
 //  Copyright (c) 2015 Roberto Dehesa. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
-class ListasTableViewController: UITableViewController, NuevaListaDelegate, NSFetchedResultsControllerDelegate {
-
+class ArticulosTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+    
     let mAppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
-    var listaArray = Array<Lista>()
     
     var fetchedResultController: NSFetchedResultsController = NSFetchedResultsController()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         fetchedResultController = getFetchedResultController()
         fetchedResultController.delegate = self
         fetchedResultController.performFetch(nil)
         
-//        for i in 1...10{
-//            var lista = Lista()
-//            
-//            lista.nombre = "Nombre\(i)"
-//            lista.numArticulos = "NumArticulos\(i)"
-//            lista.supermercado = "Supermercado\(i)"
-//            lista.importe = "Importe\(i)"
-//            
-//            listaArray.append(lista)
-//        }
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -57,26 +45,22 @@ class ListasTableViewController: UITableViewController, NuevaListaDelegate, NSFe
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        //return listaArray.count
         return fetchedResultController.sections![section].numberOfObjects
     }
 
-    
+   
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
 
-        let cesta = fetchedResultController.objectAtIndexPath(indexPath) as Cesta
-        //let lista = listaArray[indexPath.row]
         // Configure the cell...
-      //  cell.textLabel?.text = lista.nombre + " " + lista.supermercado
-        cell.textLabel?.text = cesta.nombre
+        let articulo = fetchedResultController.objectAtIndexPath(indexPath) as Articulo
+        cell.textLabel!.text = articulo.nombre
 
         return cell
     }
     
-    
     func taskFetchRequest() -> NSFetchRequest {
-        let fetchRequest = NSFetchRequest(entityName: "Cesta")
+        let fetchRequest = NSFetchRequest(entityName: "Articulo")
         let sortDescriptor = NSSortDescriptor(key: "nombre", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         return fetchRequest
@@ -87,14 +71,10 @@ class ListasTableViewController: UITableViewController, NuevaListaDelegate, NSFe
         return fetchedResultController
     }
     
-    
-    
     func controllerDidChangeContent(controller: NSFetchedResultsController!)
     {
         tableView.reloadData()
     }
-    
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -130,28 +110,14 @@ class ListasTableViewController: UITableViewController, NuevaListaDelegate, NSFe
     }
     */
 
-   
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
-        if segue.identifier == "goToNuevaListaFromListas" {
-            var navigationController = segue.destinationViewController as UINavigationController
-            var nuevaListaViewController = navigationController.viewControllers[0] as NuevaListaViewController
-            nuevaListaViewController.delegate = self 
-        
-        }
     }
-    
-    
-    // MARK - NuevaListaDelegate
-    func nuevaLista(lista: Lista) {
-        listaArray.append(lista)
-        tableView.reloadData()
-    }
-    
-    
+    */
 
 }

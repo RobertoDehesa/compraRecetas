@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WHV-kk-XO7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WHV-kk-XO7">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
@@ -51,7 +51,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="articulosButton:" destination="ft8-82-yC0" eventType="touchUpInside" id="Y3m-Z4-JeP"/>
-                                    <segue destination="dai-M1-dO2" kind="show" id="Rlg-yj-P4p"/>
+                                    <segue destination="4Wm-N8-xar" kind="show" id="gO3-W6-ThW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPZ-76-L5M">
@@ -93,15 +93,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="41" y="125" width="97" height="30"/>
-                                </variation>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Supermercado" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XBE-Fe-nnG">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="41" y="187" width="163" height="30"/>
+                                    <rect key="frame" x="41" y="87" width="97" height="30"/>
                                 </variation>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Hxj-Im-n61">
@@ -110,23 +102,41 @@
                                     <!--2015-01-17 19:53:46 +0000-->
                                 </date>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="260" width="400" height="162"/>
+                                    <rect key="frame" x="0.0" y="253" width="400" height="162"/>
                                 </variation>
                             </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comentarios" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RTH-bZ-PhL">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="41" y="144" width="97" height="30"/>
+                                </variation>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qu4-ov-wju">
+                                <rect key="frame" x="-87" y="418" width="449" height="162"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-49" y="418" width="449" height="162"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="np1-z8-yOP" id="1YD-no-jPO"/>
+                                    <outlet property="delegate" destination="np1-z8-yOP" id="SGS-6z-Ecf"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="xTL-P0-riG"/>
-                                <exclude reference="XBE-Fe-nnG"/>
                                 <exclude reference="Hxj-Im-n61"/>
+                                <exclude reference="RTH-bZ-PhL"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="xTL-P0-riG"/>
-                                <include reference="XBE-Fe-nnG"/>
                                 <include reference="Hxj-Im-n61"/>
+                                <include reference="RTH-bZ-PhL"/>
                             </mask>
                         </variation>
                     </view>
@@ -143,14 +153,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="comentariosTextField" destination="RTH-bZ-PhL" id="kJF-kw-h02"/>
                         <outlet property="datePicker" destination="Hxj-Im-n61" id="rbm-Jg-pRa"/>
                         <outlet property="nombreTextField" destination="xTL-P0-riG" id="3yR-Ja-eX8"/>
-                        <outlet property="supermercadoTextField" destination="XBE-Fe-nnG" id="ngb-I0-6uQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ztz-0Q-n1W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4804.5" y="138"/>
+            <point key="canvasLocation" x="4804" y="138"/>
         </scene>
         <!--Listas Compra-->
         <scene sceneID="Nb7-wh-eaE">
@@ -167,7 +177,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="IfG-CT-d6I" kind="show" id="M7y-6L-Use"/>
+                                    <segue destination="Hco-hN-3Fr" kind="show" id="M7y-6L-Use"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -198,24 +208,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="bottom" id="FDh-eO-MiE">
-                            <rect key="frame" x="0.0" y="130" width="600" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <items>
-                                <barButtonItem systemItem="edit" id="Vfp-Xn-bbP">
-                                    <inset key="imageInsets" minX="79" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </barButtonItem>
-                                <barButtonItem width="2" systemItem="action" id="kf7-kU-2PX">
-                                    <inset key="imageInsets" minX="290" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </barButtonItem>
-                                <barButtonItem systemItem="trash" id="ffC-UN-7A8">
-                                    <inset key="imageInsets" minX="540" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </barButtonItem>
-                            </items>
-                            <connections>
-                                <outlet property="delegate" destination="fex-is-Ouy" id="B9y-kw-o22"/>
-                            </connections>
-                        </toolbar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" id="TRI-34-RTq">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -232,7 +224,15 @@
                             <outlet property="delegate" destination="IfG-CT-d6I" id="gRu-WP-KVk"/>
                         </connections>
                     </tableView>
-                    <toolbarItems/>
+                    <toolbarItems>
+                        <barButtonItem systemItem="edit" id="maI-qt-unM"/>
+                        <barButtonItem systemItem="action" id="8RK-DU-gfh">
+                            <inset key="imageInsets" minX="280" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </barButtonItem>
+                        <barButtonItem systemItem="trash" id="kH7-wb-IRm">
+                            <inset key="imageInsets" minX="510" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Detalle Lista" id="2mm-BW-RqJ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="jrz-FM-fvd">
                             <connections>
@@ -240,11 +240,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6GT-sH-tMm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3981" y="861"/>
+            <point key="canvasLocation" x="4793" y="861"/>
         </scene>
         <!--Title-->
         <scene sceneID="ZyN-U7-wZY">
@@ -287,6 +287,12 @@
                                     <rect key="frame" x="67" y="124" width="238" height="30"/>
                                 </variation>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="izb-vD-5fH">
+                                <rect key="frame" x="80" y="181" width="255" height="30"/>
+                                <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -305,6 +311,7 @@
                     <navigationItem key="navigationItem" title="Title" id="m9v-Q8-J2G"/>
                     <connections>
                         <outlet property="articuloTextfield" destination="9qV-vJ-FJ6" id="wIk-7U-U1o"/>
+                        <outlet property="descriptionTextField" destination="izb-vD-5fH" id="z24-QV-XuU"/>
                         <outlet property="searchDisplayController" destination="CHn-D9-DSY" id="zcV-nt-5uG"/>
                     </connections>
                 </viewController>
@@ -318,7 +325,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="4804.5" y="870"/>
+            <point key="canvasLocation" x="5543" y="870"/>
         </scene>
         <!--Supermercados-->
         <scene sceneID="xV5-yD-R3a">
@@ -352,6 +359,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gFr-hh-6B9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3124" y="1722"/>
+        </scene>
+        <!--Artículos-->
+        <scene sceneID="vX4-LG-uH0">
+            <objects>
+                <tableViewController id="4Wm-N8-xar" customClass="ArticulosTableViewController" customModule="recetas" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="maf-Zn-YE3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" id="6c9-oU-pP1">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6c9-oU-pP1" id="9wU-x2-v7f">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="dai-M1-dO2" kind="show" id="Rq3-fA-Oeg"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4Wm-N8-xar" id="pdC-8k-yei"/>
+                            <outlet property="delegate" destination="4Wm-N8-xar" id="eox-7m-dhE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Artículos" id="rvs-Qf-acI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5gT-gB-fKU">
+                            <connections>
+                                <segue destination="pzS-kn-YjU" kind="showDetail" id="07Q-7Q-HkE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hFc-dE-mqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4551" y="1728"/>
         </scene>
         <!--Nuevo Supermercado-->
         <scene sceneID="MrW-z8-RDR">
@@ -445,7 +488,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoría" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yaf-PY-STS">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="77" y="187" width="75" height="21"/>
@@ -468,7 +511,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precios" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eb-YA-aaf">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="56" y="440" width="58" height="21"/>
@@ -477,7 +520,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Supermercado" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6V-ST-gMW">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="64" y="469" width="120" height="21"/>
@@ -486,7 +529,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBr-39-ezI">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="249" y="469" width="49" height="21"/>
@@ -495,7 +538,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Supermercado" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZd-1a-ynk">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="64" y="498" width="120" height="21"/>
@@ -504,7 +547,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJI-7h-g6o">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="249" y="498" width="49" height="21"/>
@@ -552,7 +595,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eaA-pO-Ods" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4925" y="1844"/>
+            <point key="canvasLocation" x="5573" y="1814"/>
         </scene>
         <!--Editar Articulo View Controller-->
         <scene sceneID="NMb-cS-2Fa">
@@ -597,7 +640,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precios" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MY0-QE-ZZp">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="66" y="387" width="58" height="21"/>
@@ -647,7 +690,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoría" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6Z-ii-E50">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="66" y="175" width="75" height="21"/>
@@ -685,7 +728,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgt-sw-b8A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5921" y="1844"/>
+            <point key="canvasLocation" x="5041" y="2544"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mkq-4O-hhb">
@@ -697,6 +740,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="h6K-Bt-iRO">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="ft8-82-yC0" kind="relationship" relationship="rootViewController" id="NIM-zm-kew"/>
                     </connections>
@@ -759,8 +805,30 @@
             </objects>
             <point key="canvasLocation" x="3306" y="2443"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NK1-ap-lqV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="Hco-hN-3Fr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pEb-vT-vw6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Wow-kz-Efq">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="IfG-CT-d6I" kind="relationship" relationship="rootViewController" id="gML-X3-dKp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Sk-vH-E46" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3981" y="861"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Rlg-yj-P4p"/>
+        <segue reference="07Q-7Q-HkE"/>
+        <segue reference="Rq3-fA-Oeg"/>
     </inferredMetricsTieBreakers>
 </document>

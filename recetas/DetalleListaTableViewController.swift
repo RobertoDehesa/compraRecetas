@@ -7,22 +7,30 @@
 //
 
 import UIKit
+import CoreData
 
-class DetalleListaTableViewController: UITableViewController {
+class DetalleListaTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+    
+    let mAppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
+    
+    var fetchedResultController: NSFetchedResultsController = NSFetchedResultsController()
 
       var listaArray = Array<DetalleLista>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        for i in 1...10{
-            var detalleLista = DetalleLista()
-            
-            detalleLista.nombre = "Nombre\(i)"
-            detalleLista.precio = "precio\(i)"
-            
-            listaArray.append(detalleLista)
-        }
+        
+        fetchedResultController = getFetchedResultController()
+        fetchedResultController.delegate = self
+        fetchedResultController.performFetch(nil)
+//        for i in 1...10{
+//            var detalleLista = DetalleLista()
+//            
+//            detalleLista.nombre = "Nombre\(i)"
+//            detalleLista.precio = "precio\(i)"
+//            
+//            listaArray.append(detalleLista)
+     //   }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -52,14 +60,33 @@ class DetalleListaTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
         
-        let lista = listaArray[indexPath.row]
+        
+        let articulo = fetchedResultController.objectAtIndexPath(indexPath) as Cesta_Articulo
         // Configure the cell...
-        cell.textLabel?.text = lista.nombre + " " + lista.precio
+        cell.textLabel?.text = articulo.newRelationship1.nombre
         
         
         return cell
     }
-
+    
+    func taskFetchRequest() -> NSFetchRequest {
+        let fetchRequest = NSFetchRequest(entityName: "Cesta_Articulo")
+        let sortDescriptor = NSSortDescriptor(key: "articulo_id", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        return fetchRequest
+    }
+    
+    func getFetchedResultController() -> NSFetchedResultsController {
+        fetchedResultController = NSFetchedResultsController(fetchRequest: taskFetchRequest(), managedObjectContext: mAppDelegate!, sectionNameKeyPath: nil, cacheName: nil)
+        return fetchedResultController
+    }
+    
+    
+    
+    func controllerDidChangeContent(controller: NSFetchedResultsController!)
+    {
+        tableView.reloadData()
+    }
 
     /*
     // Override to support conditional editing of the table view.
