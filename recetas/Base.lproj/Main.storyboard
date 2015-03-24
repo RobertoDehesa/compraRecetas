@@ -68,7 +68,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.14117647058823529" green="0.45882352941176469" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Inicio" id="jyv-8D-Jzf"/>
                 </viewController>
@@ -831,4 +831,5 @@
         <segue reference="07Q-7Q-HkE"/>
         <segue reference="Rq3-fA-Oeg"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

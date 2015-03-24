@@ -26,6 +26,15 @@ class NuevoSupermercadoViewController: UIViewController {
         var contexto:NSManagedObjectContext = mAppDelegate.managedObjectContext!
         var nuevoSupermercado = NSEntityDescription.insertNewObjectForEntityForName("Tienda", inManagedObjectContext: contexto) as Tienda
         
+        //recogemos la fecha y hora de hoy para guardarlas como id del nuevo supermercado
+        //con el formato= "YYYYMMDDHHmmss"
+        var fechaHoy:NSDate = NSDate()
+        var fechaFormateada:NSDateFormatter = NSDateFormatter()
+        fechaFormateada.dateFormat = "yyyyMMddHHmmss"
+        var fechaString:String = fechaFormateada.stringFromDate(fechaHoy)
+        
+        //Int64("42222222222".toInt()!
+        nuevoSupermercado.idtienda = NSNumber(longLong: Int64(fechaString.toInt()!))
         nuevoSupermercado.nombre = self.NombreTextField.text
         nuevoSupermercado.direccion = self.DireccionTextField.text
         nuevoSupermercado.poblacion = self.PoblacionTextField.text

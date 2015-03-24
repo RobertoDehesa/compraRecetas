@@ -16,9 +16,23 @@ class SupermercadosTableViewController: UITableViewController, NSFetchedResultsC
     
     var fetchedResultController: NSFetchedResultsController = NSFetchedResultsController()
     
-    
+    override func viewDidAppear(animated: Bool) {
+        
+        //Declaramos una variable con nuestro navigationBar
+       // var nav = self.navigationController?.navigationBar
+        //Cambiamos el estilo y el color por medio de los métodos barStyle y tintColor
+      //  nav?.barStyle = UIBarStyle.Default
+        //nav?.tintColor = UIColor.greenColor()
+       // nav?.backgroundColor = UIColor.greenColor()
+        
+       // var navItem = self.navigationItem.title
+        
+       
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         fetchedResultController = getFetchedResultController()
         fetchedResultController.delegate = self
