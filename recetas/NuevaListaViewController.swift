@@ -17,7 +17,7 @@ class NuevaListaViewController: UIViewController, NSFetchedResultsControllerDele
     var colors = ["Red","Yellow","Green","Blue"]
     var supermercados = []
  
-    var mAppDelegate:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+    var mAppDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     @IBOutlet weak var comentariosTextField: UITextField!
     
     var fetchedResultController: NSFetchedResultsController = NSFetchedResultsController()
@@ -38,7 +38,7 @@ class NuevaListaViewController: UIViewController, NSFetchedResultsControllerDele
         
         //tenemos que generar el contexto
         var contexto:NSManagedObjectContext = mAppDelegate.managedObjectContext!
-        var nuevaCesta = NSEntityDescription.insertNewObjectForEntityForName("Cesta", inManagedObjectContext: contexto) as Cesta
+        var nuevaCesta = NSEntityDescription.insertNewObjectForEntityForName("Cesta", inManagedObjectContext: contexto) as! Cesta
         
         nuevaCesta.nombre = self.nombreTextField.text
         nuevaCesta.comentarios = self.comentariosTextField.text

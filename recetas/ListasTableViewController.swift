@@ -11,7 +11,7 @@ import CoreData
 
 class ListasTableViewController: UITableViewController, NuevaListaDelegate, NSFetchedResultsControllerDelegate {
 
-    let mAppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
+    let mAppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     var listaArray = Array<Lista>()
     
     var fetchedResultController: NSFetchedResultsController = NSFetchedResultsController()
@@ -63,9 +63,9 @@ class ListasTableViewController: UITableViewController, NuevaListaDelegate, NSFe
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
 
-        let cesta = fetchedResultController.objectAtIndexPath(indexPath) as Cesta
+        let cesta = fetchedResultController.objectAtIndexPath(indexPath) as! Cesta
         //let lista = listaArray[indexPath.row]
         // Configure the cell...
       //  cell.textLabel?.text = lista.nombre + " " + lista.supermercado
@@ -138,8 +138,8 @@ class ListasTableViewController: UITableViewController, NuevaListaDelegate, NSFe
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
         if segue.identifier == "goToNuevaListaFromListas" {
-            var navigationController = segue.destinationViewController as UINavigationController
-            var nuevaListaViewController = navigationController.viewControllers[0] as NuevaListaViewController
+            var navigationController = segue.destinationViewController as! UINavigationController
+            var nuevaListaViewController = navigationController.viewControllers[0] as! NuevaListaViewController
             nuevaListaViewController.delegate = self 
         
         }

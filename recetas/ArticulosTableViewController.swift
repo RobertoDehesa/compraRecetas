@@ -11,7 +11,7 @@ import CoreData
 
 class ArticulosTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
-    let mAppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
+    let mAppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
     var fetchedResultController: NSFetchedResultsController = NSFetchedResultsController()
 
@@ -50,10 +50,10 @@ class ArticulosTableViewController: UITableViewController, NSFetchedResultsContr
 
    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
 
         // Configure the cell...
-        let articulo = fetchedResultController.objectAtIndexPath(indexPath) as Articulo
+        let articulo = fetchedResultController.objectAtIndexPath(indexPath) as! Articulo
         cell.textLabel!.text = articulo.nombre
 
         return cell

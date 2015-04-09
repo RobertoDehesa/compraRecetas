@@ -11,7 +11,7 @@ import CoreData
 
 class DetalleListaTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
-    let mAppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
+    let mAppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
     var fetchedResultController: NSFetchedResultsController = NSFetchedResultsController()
 
@@ -58,10 +58,10 @@ class DetalleListaTableViewController: UITableViewController, NSFetchedResultsCo
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         
         
-        let articulo = fetchedResultController.objectAtIndexPath(indexPath) as Cesta_Articulo
+        let articulo = fetchedResultController.objectAtIndexPath(indexPath) as! Cesta_Articulo
         // Configure the cell...
         cell.textLabel?.text = articulo.newRelationship1.nombre
         

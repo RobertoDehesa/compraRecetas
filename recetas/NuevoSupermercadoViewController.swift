@@ -11,7 +11,7 @@ import CoreData
 
 class NuevoSupermercadoViewController: UIViewController {
 
-    var mAppDelegate:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+    var mAppDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     @IBOutlet weak var NombreTextField: UITextField!
     
@@ -24,7 +24,7 @@ class NuevoSupermercadoViewController: UIViewController {
         
         //tenemos que generar el contexto
         var contexto:NSManagedObjectContext = mAppDelegate.managedObjectContext!
-        var nuevoSupermercado = NSEntityDescription.insertNewObjectForEntityForName("Tienda", inManagedObjectContext: contexto) as Tienda
+        var nuevoSupermercado = NSEntityDescription.insertNewObjectForEntityForName("Tienda", inManagedObjectContext: contexto) as! Tienda
         
         //recogemos la fecha y hora de hoy para guardarlas como id del nuevo supermercado
         //con el formato= "YYYYMMDDHHmmss"

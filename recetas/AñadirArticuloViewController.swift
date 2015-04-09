@@ -11,7 +11,7 @@ import CoreData
 
 class An_adirArticuloViewController: UIViewController {
     
-    var mAppDelegate:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+    var mAppDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 
     @IBAction func cancelButton(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
@@ -19,7 +19,7 @@ class An_adirArticuloViewController: UIViewController {
     @IBAction func saveButton(sender: AnyObject) {
         //tenemos que generar el contexto
         var contexto:NSManagedObjectContext = mAppDelegate.managedObjectContext!
-        var nuevoArticulo = NSEntityDescription.insertNewObjectForEntityForName("Articulo", inManagedObjectContext: contexto) as Articulo
+        var nuevoArticulo = NSEntityDescription.insertNewObjectForEntityForName("Articulo", inManagedObjectContext: contexto) as! Articulo
         
         nuevoArticulo.nombre = self.articuloTextfield.text
         nuevoArticulo.descripcion = self.descriptionTextField.text
