@@ -113,8 +113,9 @@ class SupermercadosTableViewController: UITableViewController, NSFetchedResultsC
         
         
         if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            mAppDelegate?.deleteObject(fetchedResultController.objectAtIndexPath(indexPath) as NSManagedObject)
+            var error:NSError?
+            mAppDelegate?.save(&error)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    

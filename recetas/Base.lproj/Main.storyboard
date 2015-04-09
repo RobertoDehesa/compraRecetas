@@ -97,15 +97,6 @@
                                     <rect key="frame" x="41" y="87" width="97" height="30"/>
                                 </variation>
                             </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Hxj-Im-n61">
-                                <rect key="frame" x="-160" y="-81" width="320" height="162"/>
-                                <date key="date" timeIntervalSinceReferenceDate="443217226.04253697">
-                                    <!--2015-01-17 19:53:46 +0000-->
-                                </date>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="253" width="400" height="162"/>
-                                </variation>
-                            </datePicker>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comentarios" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RTH-bZ-PhL">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -124,20 +115,37 @@
                                     <outlet property="delegate" destination="np1-z8-yOP" id="SGS-6z-Ecf"/>
                                 </connections>
                             </pickerView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wGs-Ue-Xlv">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="169" y="196" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Hxj-Im-n61">
+                                <rect key="frame" x="-160" y="-81" width="320" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="443217226.04253697">
+                                    <!--2015-01-17 19:53:46 +0000-->
+                                </date>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="248" width="400" height="162"/>
+                                </variation>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="xTL-P0-riG"/>
-                                <exclude reference="Hxj-Im-n61"/>
                                 <exclude reference="RTH-bZ-PhL"/>
+                                <exclude reference="wGs-Ue-Xlv"/>
+                                <exclude reference="Hxj-Im-n61"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="xTL-P0-riG"/>
-                                <include reference="Hxj-Im-n61"/>
                                 <include reference="RTH-bZ-PhL"/>
+                                <include reference="wGs-Ue-Xlv"/>
+                                <include reference="Hxj-Im-n61"/>
                             </mask>
                         </variation>
                     </view>
@@ -157,6 +165,7 @@
                         <outlet property="comentariosTextField" destination="RTH-bZ-PhL" id="kJF-kw-h02"/>
                         <outlet property="datePicker" destination="Hxj-Im-n61" id="rbm-Jg-pRa"/>
                         <outlet property="nombreTextField" destination="xTL-P0-riG" id="3yR-Ja-eX8"/>
+                        <outlet property="switchButton" destination="wGs-Ue-Xlv" id="8N3-8u-fCI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ztz-0Q-n1W" userLabel="First Responder" sceneMemberID="firstResponder"/>

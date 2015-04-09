@@ -14,8 +14,10 @@ protocol NuevaListaDelegate{
 }
 
 class NuevaListaViewController: UIViewController, NSFetchedResultsControllerDelegate {
-    var colors = ["Red","Yellow","Green","Blue"]
-    var supermercados = []
+    var colors = ["Red","Yellow","Green","Blue", "1", "2"]
+    var supermercados = Array<String>()
+    var num = 0
+    var idTienda: Int = 0
  
     var mAppDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     @IBOutlet weak var comentariosTextField: UITextField!
@@ -42,11 +44,13 @@ class NuevaListaViewController: UIViewController, NSFetchedResultsControllerDele
         
         nuevaCesta.nombre = self.nombreTextField.text
         nuevaCesta.comentarios = self.comentariosTextField.text
+        nuevaCesta.aviso_localizacion = 0
+        nuevaCesta.fechahora_creacion = NSDate()
+        nuevaCesta.orden = 2
         
         
         self.nombreTextField.text = ""
         self.comentariosTextField.text = ""
-        
         
         //guardamos el contexto
         var error:NSError?
@@ -56,16 +60,50 @@ class NuevaListaViewController: UIViewController, NSFetchedResultsControllerDele
         }
     }
     
+    @IBOutlet weak var switchButton: UISwitch!
+    
+
+    
     var delegate: NuevaListaDelegate?
     
         override func viewDidLoad() {
         super.viewDidLoad()
-       
+            // Do any additional setup after loading the view.
             
-        // Do any additional setup after loading the view.
+        fetchedResultController = getFetchedResultController()
+        fetchedResultController.delegate = self
+        fetchedResultController.performFetch(nil)
+        
+        fillSupermercados()
+            
+            if switchButton.on {
+                println("on")
+            }else {
+                println("on")
+            }
     }
     
-  
+    func fillSupermercados(){
+       let result = fetchedResultController.fetchedObjects as [Tienda]
+        println(result.count)
+        for i in 0...(result.count-1) {
+            supermercados.append(result[i].nombre)
+            println(result[i].idtienda)
+        }
+    }
+    
+    
+    func taskFetchRequest() -> NSFetchRequest {
+        let fetchRequest = NSFetchRequest(entityName: "Tienda")
+        let sortDescriptor = NSSortDescriptor(key: "nombre", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        return fetchRequest
+    }
+    
+    func getFetchedResultController() -> NSFetchedResultsController {
+        fetchedResultController = NSFetchedResultsController(fetchRequest: taskFetchRequest(), managedObjectContext: mAppDelegate.managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
+        return fetchedResultController
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -77,13 +115,17 @@ class NuevaListaViewController: UIViewController, NSFetchedResultsControllerDele
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return colors.count
+     //   return fetchedResultController.sections![component].numberOfObjects
+        return supermercados.count
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        return colors[row]
+        return supermercados[row]
     }
-
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
+        println(supermercados[row])
+    }
    
     /*
     // MARK: - Navigation
