@@ -84,7 +84,7 @@ class NuevaListaViewController: UIViewController, NSFetchedResultsControllerDele
     }
     
     func fillSupermercados(){
-       let result = fetchedResultController.fetchedObjects as [Tienda]
+       let result = fetchedResultController.fetchedObjects as! [Tienda]
         println(result.count)
         for i in 0...(result.count-1) {
             supermercados.append(result[i].nombre)

@@ -87,7 +87,7 @@ class ArticulosTableViewController: UITableViewController, NSFetchedResultsContr
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            mAppDelegate?.deleteObject(fetchedResultController.objectAtIndexPath(indexPath) as NSManagedObject)
+            mAppDelegate?.deleteObject(fetchedResultController.objectAtIndexPath(indexPath) as! NSManagedObject)
             var error:NSError?
             mAppDelegate?.save(&error)
         } else if editingStyle == .Insert {

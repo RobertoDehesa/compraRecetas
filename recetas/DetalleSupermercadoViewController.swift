@@ -29,15 +29,15 @@ class DetalleSupermercadoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        self.nombreLabel.text = nombre_tienda
+        self.direccionLabel.text = direccion_tienda
+        self.poblacionLabel.text = poblacion_tienda        // Do any additional setup after loading the view.
     }
     
     //consultamos los datos de detalle del supermercado seleccionado en el listado
     func buscarSupermercado() {
         
-      self.nombreLabel.text = nombre_tienda
-      self.direccionLabel.text = direccion_tienda
-      self.poblacionLabel.text = poblacion_tienda
+     
       /*  var contexto = mAppDelegate.managedObjectContext
         var contenido_Entidad:NSEntityDescription = NSEntityDescription.entityForName("Tienda", inManagedObjectContext: contexto!)!
         var consulta = NSFetchRequest()

@@ -106,7 +106,7 @@ class ListasTableViewController: UITableViewController, NuevaListaDelegate, NSFe
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
-            mAppDelegate?.deleteObject(fetchedResultController.objectAtIndexPath(indexPath) as NSManagedObject)
+            mAppDelegate?.deleteObject(fetchedResultController.objectAtIndexPath(indexPath) as! NSManagedObject)
             var error:NSError?
            mAppDelegate?.save(&error)
             
