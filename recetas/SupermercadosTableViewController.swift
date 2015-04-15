@@ -170,14 +170,18 @@ class SupermercadosTableViewController: UITableViewController, NSFetchedResultsC
             
             addEventViewController.newTagArray = newTagArr
             */
-            let nav = segue.destinationViewController as! UINavigationController
-            let ivc: DetalleSupermercadoViewController = nav.topViewController as! DetalleSupermercadoViewController
             
-            // let ivc: DetalleSupermercadoViewController = segue.destinationViewController as! DetalleSupermercadoViewController
+            //si tenemos un navigation controller en medio!!!
+            //let nav = segue.destinationViewController as! UINavigationController
+            //let ivc: DetalleSupermercadoViewController = nav.topViewController as! DetalleSupermercadoViewController
+            
+            let ivc: DetalleSupermercadoViewController = segue.destinationViewController as! DetalleSupermercadoViewController
             
             ivc.nombre_tienda = selectedItem.valueForKey("nombre") as! String
             ivc.direccion_tienda = selectedItem.valueForKey("direccion") as! String
             ivc.poblacion_tienda = selectedItem.valueForKey("poblacion") as! String
+            
+            ivc.existingItem = selectedItem
            // var detalleSupermercadoViewController = segue.destinationViewController as DetalleSupermercadoViewController
            //var celda = sender as UITableViewCell
            // DetalleSupermercadoViewController.supermercado = .....
