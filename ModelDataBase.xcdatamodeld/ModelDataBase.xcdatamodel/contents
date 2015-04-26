@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6751" systemVersion="14C1510" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D131" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Articulo" representedClassName="recetas.Articulo" syncable="YES">
         <attribute name="categoria_id" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="descripcion" optional="YES" attributeType="String" syncable="YES"/>
@@ -7,6 +7,19 @@
         <attribute name="imagen" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nombre" attributeType="String" syncable="YES"/>
         <relationship name="newRelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cesta_Articulo" inverseName="newRelationship1" inverseEntity="Cesta_Articulo" syncable="YES"/>
+        <relationship name="newRelationship1" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ficha_Articulo" inverseName="newRelationship1" inverseEntity="Ficha_Articulo" syncable="YES"/>
+        <relationship name="newRelationship2" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Categoria_Articulo" inverseName="newRelationship" inverseEntity="Categoria_Articulo" syncable="YES"/>
+        <relationship name="newRelationship3" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Receta_Ingrediente" inverseName="newRelationship1" inverseEntity="Receta_Ingrediente" syncable="YES"/>
+    </entity>
+    <entity name="Categoria_Articulo" representedClassName="recetas.Categoria_Articulo" syncable="YES">
+        <attribute name="idcategoria" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="nombre" attributeType="String" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Articulo" inverseName="newRelationship2" inverseEntity="Articulo" syncable="YES"/>
+    </entity>
+    <entity name="Categoria_Receta" representedClassName="recetas.Categoria_Receta" syncable="YES">
+        <attribute name="idcategoria" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Receta" inverseName="newRelationship" inverseEntity="Receta" syncable="YES"/>
     </entity>
     <entity name="Cesta" representedClassName="recetas.Cesta" syncable="YES">
         <attribute name="aviso_localizacion" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
@@ -18,6 +31,7 @@
         <attribute name="tienda_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tienda" inverseName="newRelationship" inverseEntity="Tienda" syncable="YES"/>
         <relationship name="newRelationship1" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cesta_Articulo" inverseName="newRelationship" inverseEntity="Cesta_Articulo" syncable="YES"/>
+        <relationship name="newRelationship2" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Receta_Ingrediente" inverseName="newRelationship2" inverseEntity="Receta_Ingrediente" syncable="YES"/>
     </entity>
     <entity name="Cesta_Articulo" representedClassName="recetas.Cesta_Articulo" syncable="YES">
         <attribute name="articulo_id" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
@@ -29,6 +43,41 @@
         <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cesta" inverseName="newRelationship1" inverseEntity="Cesta" syncable="YES"/>
         <relationship name="newRelationship1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Articulo" inverseName="newRelationship" inverseEntity="Articulo" syncable="YES"/>
     </entity>
+    <entity name="Ficha_Articulo" representedClassName="recetas.Ficha_Articulo" syncable="YES">
+        <attribute name="articulo_id" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="fechahora_ultimamod" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="idficha_articulo" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="observaciones" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="precio" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="tienda_id" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tienda" inverseName="newRelationship1" inverseEntity="Tienda" syncable="YES"/>
+        <relationship name="newRelationship1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Articulo" inverseName="newRelationship1" inverseEntity="Articulo" syncable="YES"/>
+    </entity>
+    <entity name="Receta" representedClassName="recetas.Receta" syncable="YES">
+        <attribute name="categoria_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="dificultad" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="elaboracion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fechahora_creacion" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="idreceta" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="imagen" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="raciones" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tiempo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="valoracion" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Categoria_Receta" inverseName="newRelationship" inverseEntity="Categoria_Receta" syncable="YES"/>
+        <relationship name="newRelationship1" toMany="YES" deletionRule="Nullify" destinationEntity="Receta_Ingrediente" inverseName="newRelationship" inverseEntity="Receta_Ingrediente" syncable="YES"/>
+    </entity>
+    <entity name="Receta_Ingrediente" representedClassName="recetas.Receta_Ingrediente" syncable="YES">
+        <attribute name="articulo_id" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="cantidad" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cesta_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="idreceta_ingrediente" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="orden" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="receta_id" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Receta" inverseName="newRelationship1" inverseEntity="Receta" syncable="YES"/>
+        <relationship name="newRelationship1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Articulo" inverseName="newRelationship3" inverseEntity="Articulo" syncable="YES"/>
+        <relationship name="newRelationship2" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cesta" inverseName="newRelationship2" inverseEntity="Cesta" syncable="YES"/>
+    </entity>
     <entity name="Tienda" representedClassName="recetas.Tienda" syncable="YES">
         <attribute name="direccion" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="idtienda" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
@@ -37,11 +86,17 @@
         <attribute name="nombre" attributeType="String" syncable="YES"/>
         <attribute name="poblacion" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="newRelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cesta" inverseName="newRelationship" inverseEntity="Cesta" syncable="YES"/>
+        <relationship name="newRelationship1" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ficha_Articulo" inverseName="newRelationship" inverseEntity="Ficha_Articulo" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Articulo" positionX="-92" positionY="-99" width="128" height="133"/>
-        <element name="Cesta" positionX="-315" positionY="-424" width="128" height="178"/>
-        <element name="Cesta_Articulo" positionX="-108" positionY="-522" width="128" height="163"/>
-        <element name="Tienda" positionX="-533" positionY="-556" width="128" height="148"/>
+        <element name="Articulo" positionX="-612" positionY="-226" width="128" height="178"/>
+        <element name="Categoria_Articulo" positionX="-450" positionY="11" width="128" height="88"/>
+        <element name="Categoria_Receta" positionX="153" positionY="-567" width="128" height="88"/>
+        <element name="Cesta" positionX="-342" positionY="-619" width="128" height="193"/>
+        <element name="Cesta_Articulo" positionX="-407" positionY="-307" width="128" height="163"/>
+        <element name="Ficha_Articulo" positionX="-828" positionY="-252" width="128" height="163"/>
+        <element name="Receta" positionX="-45" positionY="-612" width="128" height="223"/>
+        <element name="Receta_Ingrediente" positionX="27" positionY="-205" width="128" height="178"/>
+        <element name="Tienda" positionX="-837" positionY="-604" width="128" height="163"/>
     </elements>
 </model>

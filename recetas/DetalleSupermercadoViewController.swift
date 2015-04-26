@@ -79,7 +79,7 @@ class DetalleSupermercadoViewController: UIViewController {
         
         var context:NSManagedObjectContext = mAppDelegate.managedObjectContext!
         
-        context.deleteObject(existingItem)
+        
         
         var refreshAlert = UIAlertController(title: "Eliminar Supermercado", message: "¿Está seguro que desea eliminar el supermercado?", preferredStyle: UIAlertControllerStyle.Alert)
         
@@ -91,6 +91,7 @@ class DetalleSupermercadoViewController: UIViewController {
             }
             else
             {
+                context.deleteObject(self.existingItem)
                 self.navigationController?.popToRootViewControllerAnimated(true)
             }
             
