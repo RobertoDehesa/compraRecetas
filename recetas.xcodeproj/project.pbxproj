@@ -13,6 +13,8 @@
 		6F3F9DFD1ABCA74F00FB68C5 /* Tienda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3F9DFC1ABCA74F00FB68C5 /* Tienda.swift */; };
 		6F3F9DFF1ABCA74F00FB68C5 /* Cesta_Articulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3F9DFE1ABCA74F00FB68C5 /* Cesta_Articulo.swift */; };
 		6F3F9E011ABCABB200FB68C5 /* SupermercadosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3F9E001ABCABB200FB68C5 /* SupermercadosTableViewController.swift */; };
+		6F40902B1AFF6A6500A8F332 /* RecetasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F40902A1AFF6A6500A8F332 /* RecetasTableViewController.swift */; };
+		6F40902D1AFF72A100A8F332 /* NuevaRecetaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F40902C1AFF72A100A8F332 /* NuevaRecetaViewController.swift */; };
 		6F4A04A51ABC8969008DA291 /* NuevoSupermercadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4A04A41ABC8969008DA291 /* NuevoSupermercadoViewController.swift */; };
 		6F78F4031AED0067006664A2 /* Categoria_Receta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F78F4021AED0067006664A2 /* Categoria_Receta.swift */; };
 		6F78F4051AED0067006664A2 /* Receta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F78F4041AED0067006664A2 /* Receta.swift */; };
@@ -57,6 +59,8 @@
 		6F3F9DFC1ABCA74F00FB68C5 /* Tienda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tienda.swift; sourceTree = "<group>"; };
 		6F3F9DFE1ABCA74F00FB68C5 /* Cesta_Articulo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cesta_Articulo.swift; sourceTree = "<group>"; };
 		6F3F9E001ABCABB200FB68C5 /* SupermercadosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupermercadosTableViewController.swift; sourceTree = "<group>"; };
+		6F40902A1AFF6A6500A8F332 /* RecetasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecetasTableViewController.swift; sourceTree = "<group>"; };
+		6F40902C1AFF72A100A8F332 /* NuevaRecetaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuevaRecetaViewController.swift; sourceTree = "<group>"; };
 		6F4A04A41ABC8969008DA291 /* NuevoSupermercadoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuevoSupermercadoViewController.swift; sourceTree = "<group>"; };
 		6F78F4021AED0067006664A2 /* Categoria_Receta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Categoria_Receta.swift; path = ../Categoria_Receta.swift; sourceTree = "<group>"; };
 		6F78F4041AED0067006664A2 /* Receta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Receta.swift; path = ../Receta.swift; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 				6F3F9E001ABCABB200FB68C5 /* SupermercadosTableViewController.swift */,
 				7C51DCF81ABEE99400864A47 /* ArticulosTableViewController.swift */,
 				6F1BDC0B1AC33AE3005A5FE9 /* DetalleSupermercadoViewController.swift */,
+				6F40902A1AFF6A6500A8F332 /* RecetasTableViewController.swift */,
+				6F40902C1AFF72A100A8F332 /* NuevaRecetaViewController.swift */,
 			);
 			path = recetas;
 			sourceTree = "<group>";
@@ -296,6 +302,7 @@
 			files = (
 				7CEA16801AC217B10006940C /* (null) in Sources */,
 				6F78F4031AED0067006664A2 /* Categoria_Receta.swift in Sources */,
+				6F40902B1AFF6A6500A8F332 /* RecetasTableViewController.swift in Sources */,
 				7C4FEAEC1A7544410054AA1E /* EditarArticuloViewController.swift in Sources */,
 				6F3F9DFF1ABCA74F00FB68C5 /* Cesta_Articulo.swift in Sources */,
 				7C4FEAEE1A754C670054AA1E /* DetalleArticuloViewController.swift in Sources */,
@@ -309,6 +316,7 @@
 				6FD03BC01AB9FD6C007D14C3 /* ModelDataBase.xcdatamodeld in Sources */,
 				6F4A04A51ABC8969008DA291 /* NuevoSupermercadoViewController.swift in Sources */,
 				7CB84E0A1A6C3C0A00DA8348 /* AñadirArticuloViewController.swift in Sources */,
+				6F40902D1AFF72A100A8F332 /* NuevaRecetaViewController.swift in Sources */,
 				6F78F4051AED0067006664A2 /* Receta.swift in Sources */,
 				7C51DCF91ABEE99400864A47 /* ArticulosTableViewController.swift in Sources */,
 				6F3F9DFD1ABCA74F00FB68C5 /* Tienda.swift in Sources */,
